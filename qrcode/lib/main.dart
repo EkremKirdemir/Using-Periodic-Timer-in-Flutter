@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
       ElevatedButton(onPressed: null, child: null)
     ],
   );*/
-  late String qrCode;
+  String qrCode = '';
   @override
   void initState() {
     super.initState();
@@ -58,13 +58,19 @@ class _MainScreenState extends State<MainScreen> {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              /*Text(
                 "Write your qr code data here",
-              ),
-              TextField(
-                controller: t1,
-              ),
+              ),*/
+              Padding(
+                  padding: EdgeInsets.all(40.0),
+                  child: TextField(
+                    controller: t1,
+                    decoration: InputDecoration(
+                        hintText: 'Insert your qr code data here',
+                        hintStyle: TextStyle(fontStyle: FontStyle.italic)),
+                  )),
               ElevatedButton(
                   onPressed: () {
                     SystemChrome.setEnabledSystemUIMode(
