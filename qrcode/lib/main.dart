@@ -18,11 +18,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/*class Qr {
-  String qrCode;
-  Qr({required this.qrCode});
-}*/
-
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -33,13 +28,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   TextEditingController t1 = TextEditingController();
 
-  /*var rrow = Row(
-    children: [
-      // ignore: prefer_const_constructors
-      TextField(),
-      ElevatedButton(onPressed: null, child: null)
-    ],
-  );*/
   String qrCode = '';
   @override
   void initState() {
@@ -60,9 +48,6 @@ class _MainScreenState extends State<MainScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              /*Text(
-                "Write your qr code data here",
-              ),*/
               Padding(
                   padding: EdgeInsets.all(40.0),
                   child: TextField(
@@ -83,11 +68,7 @@ class _MainScreenState extends State<MainScreen> {
                   child: Text("Create Qr Code"))
             ],
           ),
-        )
-        /*body: Center(
-          child: tmr % 2 == 0 ? img : null,
-        )*/
-        );
+        ));
   }
 }
 
@@ -101,13 +82,7 @@ class Screen2 extends StatefulWidget {
 
 class _Screen2State extends State<Screen2> {
   int tmr = 0;
-  /*final img = QrImage(
-    data: widget.qrCode,
-    version: QrVersions.auto,
-    size: 200,
-    backgroundColor: Colors.white,
-    gapless: false,
-  );*/
+
   @override
   void initState() {
     super.initState();
@@ -143,29 +118,3 @@ class _Screen2State extends State<Screen2> {
         ));
   }
 }
-
-
-/*appBar: AppBar(
-          title: Text('QR CODE GENERATOR'),
-          centerTitle: true,
-        ),
-        backgroundColor: Colors.blue,
-        body: Center(
-            child: tmr %2 == 0 ? QrImage(
-          data: 'This is a simple QR code',
-          version: QrVersions.auto,
-          size: 200,
-          backgroundColor: Colors.white,
-          gapless: false,
-        ): Text('safsaf') ,)
-
-        int tmr = 10;
-  @override
-  void initState() {
-    super.initState();
-    Timer.periodic(Duration(milliseconds: 500), (timer) {
-      setState(() {
-        tmr--;
-      });
-    })*/
-    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
